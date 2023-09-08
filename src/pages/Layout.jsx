@@ -1,29 +1,16 @@
-import { Outlet, Link } from 'react-router-dom';
-import "../index.css"
+import React from 'react'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
+import { Outlet } from 'react-router'
 
-function  Layout(){
+const Layout = () => {
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/contacto">Contacto</Link>
-                    </li>
-                    <li>
-                        <Link to="/detalle-dentista">Detalle Dentista</Link>
-                    </li>
-                    <li>
-                        <Link to="/favoritos">Favoritos</Link>
-                    </li>
-                </ul>
-            </nav>
-
-            <Outlet/> 
+        <div className='App'>
+            <Navbar />
+            <Outlet />
+            <Footer />
         </div>
     )
 }
 
-export default Layout;
+export default Layout

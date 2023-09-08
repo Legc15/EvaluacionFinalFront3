@@ -1,9 +1,11 @@
 
-function Home(){
+import "../index.css";
+
+function Home() {
     return (
-        <div>
-            <h1>Página principal</h1>
-        </div>
+        <main>
+            <h1>Nuestros Odontólogos</h1>
+        </main>
     )
 }
 
