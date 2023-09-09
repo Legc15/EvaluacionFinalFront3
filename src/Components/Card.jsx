@@ -9,7 +9,7 @@ const Card = ({ name, username, id }) => {
         const tarjeta = {
             id,
             name,
-            username
+            username,
         };
 
         // Convertir la tarjeta a una cadena JSON
@@ -24,6 +24,10 @@ const Card = ({ name, username, id }) => {
         <div className="card">
             {/* En cada card deberan mostrar en name - username y el id */}
 
+            <div>
+                <img src="images/doctor.jpg" alt="foto odontologo"></img>
+
+            </div>
             <h3>{name}</h3>
             <p>Username: {username}</p>
             <p>ID: {id}</p>

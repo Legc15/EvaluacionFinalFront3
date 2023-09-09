@@ -23,7 +23,7 @@ const Form = () => {
 
         const validar = () => {
             if (formData.nombre.length < 5 || !formData.email.includes('@')) {
-                return '<h3>Por favor verifique su información nuevamente<h3/>';
+                return 'Por favor verifique su información nuevamente';
             }
 
             return `Gracias ${formData.nombre}, te contactaremos cuanto antes vía email.`;
@@ -34,11 +34,12 @@ const Form = () => {
     };
 
     return (
-        <div>
-            <h2>Formulario de Registro</h2>
+        <div className="form-container">
+            
             <form onSubmit={handleSubmit}>
+            
                 <div>
-                    <label htmlFor="nombre">Nombre:</label>
+                    <label htmlFor="nombre" placeholder="Nombre:"></label>
                     <input
                         type="text"
                         id="nombre"
@@ -48,7 +49,7 @@ const Form = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="email">Correo Electrónico:</label>
+                    <label htmlFor="email" label="Correo Electrónico:"></label>
                     <input
                         type="email"
                         id="email"
@@ -58,7 +59,7 @@ const Form = () => {
                     />
                 </div>
                 {mensaje && <p className={mensaje.includes('Gracias') ? 'exito' : 'error'}>{mensaje}</p>}
-                <button type="submit">Enviar</button>
+                <button type="submit" >Enviar</button>
             </form>
         </div>
     );

@@ -34,7 +34,7 @@ function Home() {
     return (
         <main>
             <h1>Nuestros Odontólogos</h1>
-            <div className="odontologos-list">
+            <div className="card-grid">
                 {odontologos.map((odontologo) => (
                     <Link
                         key={odontologo.id}
