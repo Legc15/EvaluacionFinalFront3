@@ -5,14 +5,18 @@ import Card from "../Components/Card";
 
 function Home() {
 
+
+    //Se obtienen datos de odontologos de la api
     const obtenerInfo = () => {
 
         axios.get('https://jsonplaceholder.typicode.com/users')
             .then(response => {
-                console.log(response.data);
+                const datos = response.data;
+
+                localStorage.setItem('datosAPI', JSON.stringify(datos));
             })
             .catch(error => {
-                console.error(error);
+                console.error('Error al obtener datos de la API:',error);
             });
 
     }
