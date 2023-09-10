@@ -39,23 +39,25 @@ const Form = () => {
             <form onSubmit={handleSubmit}>
             
                 <div>
-                    <label htmlFor="nombre" placeholder="Nombre:"></label>
+                    <label htmlFor="nombre" ></label>
                     <input
                         type="text"
                         id="nombre"
                         name="nombre"
                         value={formData.nombre}
                         onChange={handleInputChange}
+                        placeholder="Nombre:"
                     />
                 </div>
                 <div>
-                    <label htmlFor="email" label="Correo Electrónico:"></label>
+                    <label htmlFor="email" ></label>
                     <input
                         type="email"
                         id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
+                        placeholder="Email:"
                     />
                 </div>
                 {mensaje && <p className={mensaje.includes('Gracias') ? 'exito' : 'error'}>{mensaje}</p>}
