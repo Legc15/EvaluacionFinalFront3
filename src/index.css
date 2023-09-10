@@ -156,10 +156,10 @@ form {
 }
 
 .form-container input[type="text"]{
-  width: 98%
+  width: 98%;
 }
 .form-container input[type="email"]{
-  width: 98%
+  width: 98%;
 }
 .form-container button {
   width: 100%; /* Establecer el ancho al 100% */

@@ -26,7 +26,7 @@ const Card = ({ name, username, id }) => {
             {/* En cada card deberan mostrar en name - username y el id */}
             <Link to={`/odontologo/${id}`} className="card-link">
             <div>
-                <img src="images/doctor.jpg" alt="foto odontologo"></img>
+                <img src='./images/doctor.jpg' alt="foto odontologo"></img>
 
             </div>
             <h3>{name}</h3>

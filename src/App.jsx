@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Favoritos from "./pages/Favoritos";
 import Contacto from "./pages/Contacto";
 import NoPage from "./pages/NoPage";
-import DetalleOdontologo from './pages/DetalleOdontologo';
+import Detail from './pages/Detail';
 
 
 
@@ -19,7 +19,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="favoritos" element={<Favoritos />} />
           <Route path="contacto" element={<Contacto />} />
-          <Route path="odontologo/:id" element={<DetalleOdontologo />} />
+          <Route path="odontologo/:id" element={<Detail />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
