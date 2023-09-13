@@ -10,11 +10,11 @@ export const setFavoritosStorage = (odontologo) => {
     });
 
 
-    if(nuevoFavoritos.length === 0){
+    if (nuevoFavoritos.length === 0) {
         favoritos.push(odontologo)
         localStorage.setItem("favs", JSON.stringify(favoritos));
         alert(`Odontologo ${odontologo.name} se agregó a favoritos`)
-    }else{
+    } else {
         alert(`Odontologo ${odontologo.name} ya esta en favoritos`)
     }
 }
@@ -22,11 +22,11 @@ export const setFavoritosStorage = (odontologo) => {
 export const eliminarDeFavorito = (id, name) => {
     let favoritos = obtenerFavoritosDeStorage();
     const index = favoritos.findIndex(fav => fav.id === id);
-    if(index !== -1){
+    if (index !== -1) {
         favoritos.splice(index, 1);
         localStorage.setItem("favs", JSON.stringify(favoritos));
         alert(`Odontologo ${name} se eliminó de la lista`)
-    }else{
+    } else {
         alert(`Odontologo ${name} no se pudo eliminar de la lista`)
     }
 }

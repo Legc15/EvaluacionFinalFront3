@@ -24,11 +24,10 @@ const Navbar = () => {
                 <div className="navbar">
                     <Link to="/">Home</Link>
                     <Link to="/contacto">Contact</Link>
-                    <Link to="/favoritos">Favs</Link>
+                    <Link to="/favoritos">Fav</Link>
 
                     <button onClick={cambiarTema}>
                         {state.theme.id === "light" ?"🌙":"🌞" }
-
                     </button>
                 </div>
             </nav>

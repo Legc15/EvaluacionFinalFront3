@@ -17,14 +17,18 @@ const temas = {
 const initialState = {
     theme: temas.light,
     favoritos: [],
+    flag: true
 };
 const funcionReducer = (state, action) => {
     switch (action.type) {
         case "SWITCHTHEME":
             return { ...state, theme: state.theme.id === "light" ? temas.dark : temas.light }
 
-        //case "FAVORITOS":
-        //   return { ...state, favoritos: action.payload};
+        case "SETFAVORITOS":
+            return { ...state, favoritos: action.payload};
+
+        case "FLAG":
+            return {...state, flag: action.payload};
 
         default:
             return state;
