@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ContextGlobal } from "./utils/global.context";
+import { setFavoritosStorage,eliminarDeFavorito, esFavorito } from "./utils/localStorage";
 
 
 const Card = ({ name, username, id }) => {
 
+    
+    const {state, dispatch} = useContext(ContextGlobal);
+
     const addFav = () => {
-        // Aqui iria la logica para agregar la Card en el localStorage
+        dispatch({type:FLAG })
+        if(!esFavorito(id)){
+            setFavoritoStorage({name, username, id})
+        }else{
+            eliminarDeFavoritos(id,name)
+        }
 
         const tarjeta = {
             id,
@@ -29,9 +39,8 @@ const Card = ({ name, username, id }) => {
                 <img src='./images/doctor.jpg' alt="foto odontologo"></img>
 
             </div>
-            <h3>{name}</h3>
-            <p>Username: {username}</p>
-            <p>ID: {id}</p>
+            <h3>{name}</h3>      
+            <p>{username}</p>      
             </Link>
 
             {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
@@ -39,7 +48,10 @@ const Card = ({ name, username, id }) => {
             
 
             {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-            <button onClick={addFav} className="favButton">Add fav</button>
+            <button onClick={addFav} className="favButton">{esFavorito(id) ? "⭐" : "Add to Favs"}</button>
+
+            
+
         </div>
     );
 };

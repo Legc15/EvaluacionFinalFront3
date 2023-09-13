@@ -15,20 +15,19 @@ const Navbar = () => {
 
     return (
         <div className="nav-container">
-            <div>
-                <h1 className="nav-title">Denta Lix</h1>
+
+            <div className="nav-title">
+                <h1>Denta-Fix</h1>
             </div>
 
             <nav>
                 <div className="navbar">
                     <Link to="/">Home</Link>
-                    <Link to="/contacto">Contacto</Link>
-                    <Link to="/favoritos">Favoritos</Link>
-                </div>
+                    <Link to="/contacto">Contact</Link>
+                    <Link to="/favoritos">Favs</Link>
 
-                <div>
                     <button onClick={cambiarTema}>
-                        {state.theme.id === "light" ?  "🌞":"🌙" }
+                        {state.theme.id === "light" ?"🌙":"🌞" }
 
                     </button>
                 </div>

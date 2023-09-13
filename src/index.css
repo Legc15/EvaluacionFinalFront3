@@ -16,24 +16,31 @@ code {
 h1 {
   text-align: center;
 }
+/*------------- HEADER---------------*/
 
 .nav-container{
   display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.nav-title{
   
 }
+
 nav{
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  width: 20vw;
-  margin: 0 auto;
-
+  justify-content: space-evenly;
+  
 }
+
 .navbar {
   display: flex;
+  justify-content: space-between;
   padding: 20px;
   list-style:none;
-  width: 80vw;
+  min-width: 30vw;
   padding: 1rem;
 }
 
@@ -78,35 +85,12 @@ tr:nth-child(even) {
   color: white;
 }
 
-/* ----------- Footer------*/
-
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
-}
-
-footer>img {
-  width: 200px;
-  margin: 0;
-}
-
-footer>p {
-  margin: 0;
-  padding-top: 0.7rem;
-}
 
 
 /* --------------Home----------*/
 
 .card img {
-  width: 100px;
+  width: 200px;
 }
 
 .card:hover {
@@ -115,7 +99,8 @@ footer>p {
 
 .card-grid {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;  
+  justify-content: space-around;
   gap: 1rem;
   width: 90vw;
   height: auto;
@@ -125,13 +110,16 @@ footer>p {
 
 .card {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  height: 350px;
+  padding: 0.4em;
+  border: 0.8px solid rgb(136, 136, 136);
 }
+
 
 .favButton {
   background-color: rgba(136, 136, 136, 0.116);
@@ -164,4 +152,51 @@ form {
 .form-container button {
   width: 100%; /* Establecer el ancho al 100% */
   
+}
+
+/* ----------- Footer------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 7vh;
+  margin-top: 2rem;
+}
+
+.backToTop {
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.poweredBy {
+  display: flex;
+  margin-left: 50px;
+  
+}
+footer img {
+  width: 200px;
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+  padding-top: 0.7rem;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 50px;
+  font-size: 1.5rem;
+  gap: 8px;
+}
+
+.socialMedia img {
+  width: 30px;
+  cursor: pointer;
 }

@@ -33,7 +33,7 @@ function Home() {
 
     return (
         <main>
-            <h1>Nuestros Odontólogos</h1>
+            <h1>Our Dentist</h1>
             <div className="card-grid">
                 {odontologos.map((odontologo) => (
                     <Link
@@ -41,7 +41,7 @@ function Home() {
                         to={`/home/${odontologo.id}`}
                         className="odontologo-link"
                     >
-                        <Card key={odontologo.id} name={odontologo.name} username={odontologo.username} id={odontologo.id} />
+                        <Card name={odontologo.name} username={odontologo.username} id={odontologo.id} />
                     </Link>
                 ))}
             </div>
