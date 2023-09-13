@@ -4,6 +4,7 @@ import { ContextGlobal } from "./utils/global.context";
 
 
 
+
 const Navbar = () => {
     const { state, dispatch } = useContext(ContextGlobal);
 
@@ -15,8 +16,13 @@ const Navbar = () => {
 
     return (
         <div className="nav-container">
-
+            
             <div className="nav-title">
+                <img 
+                    className="logoDiente"
+                    src='./public/images/Tooth-icon.jpg' 
+                    alt="LogoDiente" 
+                /> 
                 <h1>Denta-Fix</h1>
             </div>
 
