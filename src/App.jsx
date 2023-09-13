@@ -1,27 +1,32 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './index.css';
+import "./index.css";
 
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Favoritos from "./pages/Favoritos";
 import Contacto from "./pages/Contacto";
 import NoPage from "./pages/NoPage";
+import {ContextProvider} from "./Components/utils/global.context"
 
 
 
 
 function App() {
+
+  
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path="favoritos" element={<Favoritos/>}/>
-          <Route path="contacto" element={<Contacto/>}/>
-          <Route path="*" element={<NoPage/>}/> 
-        </Route>     
-      </Routes>
-    </BrowserRouter>
+    <ContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="favoritos" element={<Favoritos />} />
+            <Route path="contacto" element={<Contacto />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ContextProvider>
 
   );
 }
