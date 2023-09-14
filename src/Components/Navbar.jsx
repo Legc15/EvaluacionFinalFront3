@@ -33,7 +33,7 @@ const Navbar = () => {
                     <Link to="/favoritos">Fav</Link>
 
                     <button onClick={cambiarTema}>
-                        {state.theme.id === "light" ?"🌙":"🌞" }
+                        {state.theme === "light" ?"🌙":"🌞" }
                     </button>
                 </div>
             </nav>
