@@ -27,9 +27,9 @@ const DetalleOdontologo = ({ odontologoId }) => {
       {odontologoDetalles ? (
         <div>
           <img src='https://st3.depositphotos.com/1743476/32257/i/450/depositphotos_322579018-stock-photo-smiling-doctor-standing-on-grey.jpg' alt="foto odontologo"></img>
-          <p>ID del Odontólogo: {odontologoDetalles.id}</p>
-          <p>Nombre: {odontologoDetalles.name}</p>
-          <p>Correo Electrónico: {odontologoDetalles.email}</p>
+          <p>Dentist ID: {odontologoDetalles.id}</p>
+          <p>Name: {odontologoDetalles.name}</p>
+          <p>Email: {odontologoDetalles.email}</p>
           <p>Web: {odontologoDetalles.website}</p>
 
         </div>

@@ -4,7 +4,7 @@ import Form from '../Components/Form'
 function Contacto(){
     return (
         <div className='contacto'>
-            <h1>Contacto</h1>
+            <h1>Contact</h1>
             <Form/>
         </div>
     )

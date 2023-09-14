@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from "react";
 
 
-const temas = {
+/* const temas = {
     light: {
         id: "light",
         font: "black",
@@ -12,7 +12,8 @@ const temas = {
         font: "white",
         background: "black"
     }
-};
+}; 
+*/
 
 const initialState = {
     theme: temas.light,
@@ -22,7 +23,7 @@ const initialState = {
 const funcionReducer = (state, action) => {
     switch (action.type) {
         case "SWITCHTHEME":
-            return { ...state, theme: state.theme.id === "light" ? temas.dark : temas.light }
+            return { ...state, theme: state.theme === "light" ? "dark" : "light" }
 
         case "SETFAVORITOS":
             return { ...state, favoritos: action.payload};

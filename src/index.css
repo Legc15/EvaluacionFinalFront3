@@ -40,6 +40,7 @@ nav button {
   cursor: pointer;
   border-radius: 5px;
   border: none
+
 }
 .navbar {
   display: flex;
@@ -82,14 +83,8 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark {
-  background-color: #12121296;
-  color: white;
-}
 
-.dark>a {
-  color: white;
-}
+
 
 
 
@@ -208,3 +203,26 @@ footer p {
   padding-top: 0.7rem;
 }
 
+/* Estilo inicial del botón */
+.favButton {
+  background-color: #007bff; /* Color de fondo predeterminado */
+  color: white; /* Color de texto predeterminado */
+  border: none;
+
+}
+
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+/* Estilos para el tema oscuro */
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.dark>a {
+  color: white;
+}

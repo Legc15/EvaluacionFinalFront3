@@ -9,7 +9,11 @@ const Card = ({ name, username, id }) => {
 
     const { state, dispatch } = useContext(ContextGlobal);
 
-    const addFav = () => {
+    const addFav = (e) => {
+
+        e.preventDefault(); // Evita el comportamiento predeterminado del botón
+
+
         dispatch({ type: FLAG })
         if (!esFavorito(id)) {
             setFavoritoStorage({ name, username, id })
@@ -36,7 +40,8 @@ const Card = ({ name, username, id }) => {
             {/* En cada card deberan mostrar en name - username y el id */}
             <Link 
                 to={`/odontologo/${id}`} 
-                className="card-link">
+                className="card-link"
+                >
                 
                 <div>
                     <img 

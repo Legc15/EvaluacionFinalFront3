@@ -11,10 +11,11 @@ const Layout = () => {
 
 
     return (
-        <div className='App' style={{backgroundColor: state.theme.background}}>
-            <Navbar />
+        <div className={`${state.theme === 'dark' ? 'dark' : ''}`}>
+            <Navbar/>
             <Outlet />
             <Footer />
+        
         </div>
     )
 };

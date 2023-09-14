@@ -26,7 +26,8 @@ const Navbar = () => {
                     <Link to="/contacto">Contact</Link>
                     <Link to="/favoritos">Fav</Link>
 
-                    <button onClick={cambiarTema}>
+                    <button onClick={cambiarTema}
+                    >
                         {state.theme.id === "light" ?"🌙":"🌞" }
                     </button>
                 </div>
