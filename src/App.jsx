@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {ContextProvider} from "./Components/utils/global.context";
+import { ContextProvider } from "./Components/utils/global.context";
 import "./index.css";
 
 import Layout from "./pages/Layout";
@@ -16,8 +16,10 @@ function App() {
 
   return (
 
-    <ContextProvider>
+    <ContextProvider  >
+
       <BrowserRouter>
+
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -27,7 +29,9 @@ function App() {
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
+
       </BrowserRouter>
+
     </ContextProvider>
   );
 }

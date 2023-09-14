@@ -1,28 +1,30 @@
 import React, { createContext, useReducer } from "react";
+import "../../index.css";
+export const ContextGlobal = createContext(undefined)
 
-
-const temas = {
+/*
+export const temas = {
     light: {
         id: "light",
-        font: "black",
+        color: "red",
         background: "white"
     },
     dark: {
         id: "dark",
-        font: "white",
+        color: "white",
         background: "black"
     }
 };
-
+*/
 const initialState = {
-    theme: temas.light,
+    theme: "light",
     favoritos: [],
-    flag: true
+    flag: true,
 };
 const funcionReducer = (state, action) => {
     switch (action.type) {
         case "SWITCHTHEME":
-            return { ...state, theme: state.theme.id === "light" ? temas.dark : temas.light }
+            return { theme: state.theme === "light" ? "dark" : "light"}
 
         case "SETFAVORITOS":
             return { ...state, favoritos: action.payload};
@@ -35,7 +37,7 @@ const funcionReducer = (state, action) => {
     }
 };
 
-export const ContextGlobal = createContext();
+;
 
 export const ContextProvider = ({ children }) => {
 

@@ -12,10 +12,10 @@ const Navbar = () => {
         dispatch({ type: "SWITCHTHEME"});
     };
 
-
+    
 
     return (
-        <div className="nav-container">
+        <div className="nav-contaier">
             
             <div className="nav-title">
                 <img 

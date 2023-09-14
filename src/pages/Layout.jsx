@@ -11,7 +11,8 @@ const Layout = () => {
 
 
     return (
-        <div className='App' style={{backgroundColor: state.theme.background}}>
+
+        <div className={`${state.theme === 'dark' ? 'dark' : ''}`}>
             <Navbar />
             <Outlet />
             <Footer />
