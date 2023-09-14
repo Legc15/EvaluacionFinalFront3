@@ -36,13 +36,14 @@ function Home() {
             <h1>Our Dentist</h1>
             <div className="card-grid">
                 {odontologos.map((odontologo) => (
-                    <Link
+                    //Esto hacia que al tocar addfav redireccione a una pagina no enconrada
+                    /*<Link
                         key={odontologo.id}
                         to={`/home/${odontologo.id}`}
                         className="odontologo-link"
-                    >
+                    >*/
                         <Card name={odontologo.name} username={odontologo.username} id={odontologo.id} />
-                    </Link>
+                    // </Link>
                 ))}
             </div>
         </main>

@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.contacto {
+  height: 67vh;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -22,10 +24,12 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin: 0 50px;
+  height: 15vh;
 }
 
 .nav-title{
-  
+  display: flex;
+  align-items: center;
 }
 
 nav{
@@ -37,7 +41,6 @@ nav{
 
 nav button {
   background-color: black;
-  cursor: pointer;
   border-radius: 5px;
   border: none
 
@@ -49,6 +52,11 @@ nav button {
   list-style:none;
   min-width: 30vw;
   padding: 1rem;
+}
+
+.logoDiente{
+  width: 60px;
+  height: 60px;
 }
 
 a {
@@ -84,12 +92,21 @@ tr:nth-child(even) {
 }
 
 
+.dark {
+  background-color: #12121296;
+  color: rgb(202, 29, 29);
+}
 
+.dark a {
+  color: white;
+}
 
 
 
 /* --------------Home----------*/
-
+.Home{
+  height: 80vh;
+}
 .card img {
   width: 200px;
 }
@@ -133,6 +150,8 @@ tr:nth-child(even) {
 
 
 /* --------------Contacto----------*/
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -161,14 +180,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: darkgray;
-  height: 150px;
+  background-color: rgb(14, 70, 87);
+  height: 18vh;
   margin-top: 2rem;
 }
 
 .backToTop {
   width: 100%;
-  background-color: rgb(212, 23, 23);
+  background-color: rgb(212, 114, 23);
   color: white;
   padding: 10px;
   border: none;

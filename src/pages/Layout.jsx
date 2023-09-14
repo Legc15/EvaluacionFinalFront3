@@ -11,8 +11,9 @@ const Layout = () => {
 
 
     return (
+
         <div className={`${state.theme === 'dark' ? 'dark' : ''}`}>
-            <Navbar/>
+            <Navbar />
             <Outlet />
             <Footer />
         

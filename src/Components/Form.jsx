@@ -46,7 +46,7 @@ const Form = () => {
                         name="nombre"
                         value={formData.nombre}
                         onChange={handleInputChange}
-                        placeholder="Nombre:"
+                        placeholder="Name:"
                     />
                 </div>
                 <div>
