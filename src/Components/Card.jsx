@@ -5,6 +5,7 @@ import { setFavoritosStorage, eliminarDeFavorito, esFavorito } from "./utils/loc
 
 const Card = ({ name, username, id }) => {
     const { state, dispatch } = useContext(ContextGlobal);
+    
 
     const addFav = () => {
         dispatch({ type: "FLAG" }); 
@@ -15,6 +16,11 @@ const Card = ({ name, username, id }) => {
         }
     };
 
+
+    const setStyleButton = () => {
+        dispatch({ type: "FAVBUTTON"});
+    }
+
     return (
         <div className="card">
             <Link to={`/odontologo/${id}`} className="card-link">
@@ -24,8 +30,8 @@ const Card = ({ name, username, id }) => {
                 <h3>{name}</h3>
                 <p>{username}</p>
             </Link>
-            <button onClick={addFav} className="favButton">
-                {esFavorito(id) ? "⭐ Remove from Favs" : "Add to Favs"}
+            <button onClick={addFav} className= {state.favButton}>
+                {esFavorito(id) ?  "⭐" : "Add to Favs"}
             </button>
         </div>
     );

@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-//import DetalleOdontologo from '../Components/DetalleOdontologo'; (Foto hardcodeada d eodontologo)
 import axios from 'axios';
 
 
 const Detail = () => {
-    const [odontologo, setOdontologo] = useState(null); // Estado inicial vacío
-    const { id } = useParams(); // Captura la ID de la URL
+    const [odontologo, setOdontologo] = useState(null); 
+    const { id } = useParams(); 
 
     useEffect(() => {
         axios.get(`http://jsonplaceholder.typicode.com/users/${id}`)

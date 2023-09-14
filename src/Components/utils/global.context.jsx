@@ -7,6 +7,7 @@ const initialState = {
     theme: "light",
     favoritos: [],
     flag: true,
+    favButton:"UnClicked"
 };
 const funcionReducer = (state, action) => {
     switch (action.type) {
@@ -19,6 +20,9 @@ const funcionReducer = (state, action) => {
         case "FLAG":
             return {...state, flag: action.payload};
 
+        case "FAVBUTTON":
+            return {favButton: state.favButton === "Unclicked" ? "clicked" : "Unclicked"}                  
+            
         default:
             return state;
     }

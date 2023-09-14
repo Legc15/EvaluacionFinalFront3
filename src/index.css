@@ -17,6 +17,14 @@ code {
 h1 {
   text-align: center;
 }
+
+h3 {
+  font-size: medium;
+}
+
+p {
+  font-size: smaller;
+}
 /*------------- HEADER---------------*/
 
 .nav-container{
@@ -141,11 +149,23 @@ tr:nth-child(even) {
 
 
 .favButton {
-  background-color: rgba(136, 136, 136, 0.116);
+
   padding: 10px;
   border: none;
-  width: 100%;
+  width: 90%;
   cursor: pointer;
+  background-color: #007bffbe; /* Color de fondo predeterminado */
+  color: white; /* Color de texto predeterminado */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Estilo inicial del botón */
+.favButton {
+
+
 }
 
 
@@ -235,13 +255,6 @@ footer p {
   padding-top: 0.7rem;
 }
 
-/* Estilo inicial del botón */
-.favButton {
-  background-color: #007bff; /* Color de fondo predeterminado */
-  color: white; /* Color de texto predeterminado */
-  border: none;
-
-}
 
 
 .light {
