@@ -25,7 +25,7 @@ const Card = ({ name, username, id }) => {
                 <p>{username}</p>
             </Link>
             <button onClick={addFav} className="favButton">
-                {esFavorito(id) ? "⭐ Favorito" : "Add to Favs"}
+                {esFavorito(id) ? "⭐ Remove from Favs" : "Add to Favs"}
             </button>
         </div>
     );
