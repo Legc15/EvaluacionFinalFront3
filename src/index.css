@@ -197,7 +197,7 @@ tr:nth-child(even) {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-
+  
 }
 
 
@@ -279,7 +279,8 @@ footer {
 
 .socialMedia img {
   width: 30px;
-  cursor: pointer;  
+  cursor: pointer; 
+  transform: scale(1.5); 
 }
 
 .poweredBy {

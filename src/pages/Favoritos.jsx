@@ -9,12 +9,16 @@ const Favoritos =()=>{
 
     useEffect(() => {
         const favoritos = obtenerFavoritosDeStorage();
+        
         dispatch({type: "SETFAVORITOS", payload: favoritos})
     }, [dispatch, state.favoritos])
 
     return (
         <div>
             <h1>Your favourites dentists</h1>
+            {state.favoritos.length === 0 ? (<h2> Your list it´s empty... </h2> 
+            ) : (            
+            
             <div className='card-grid'>
                 {state.favoritos.map((odontologo) => (
                     <Card 
@@ -25,8 +29,13 @@ const Favoritos =()=>{
                     />
                 ))}
             </div>
+            )}
         </div>
-    )
-}
+        
+        );
+
+        };
+
+
 
 export default Favoritos
