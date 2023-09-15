@@ -7,7 +7,7 @@ function Home() {
     const [odontologos, setOdontologos] = useState([]);
 
     useEffect(() => {
-        // Función para obtener datos de odontólogos de la API
+        // Sacamos datos de odontólogos de la API
         const obtenerInfo = () => {
             axios.get('https://jsonplaceholder.typicode.com/users')
                 .then((response) => {
@@ -20,13 +20,13 @@ function Home() {
                 });
         };
 
-        // Recuperar los datos del localStorage y convertirlos de nuevo a un objeto
+        // los datos del localStorage los convertimos de nuevo a un objeto
         const datosGuardados = localStorage.getItem('datosAPI');
         if (datosGuardados) {
             const datos = JSON.parse(datosGuardados);
-            setOdontologos(datos); // Establecer los odontólogos en el estado
+            setOdontologos(datos); 
         } else {
-            // Si no hay datos en el localStorage, obtén los datos de la API y almacénalos
+            // Si no hay datos en el localStorage, obtener los datos de la API y almacenarlos
             obtenerInfo();
         }
     }, []);
@@ -36,13 +36,9 @@ function Home() {
             <h1>Our Dentist</h1>
             <div className="card-grid">
                 {odontologos.map((odontologo) => (
-                    <Link
-                        key={odontologo.id}
-                        to={`/home/${odontologo.id}`}
-                        className="odontologo-link"
-                    >
-                        <Card name={odontologo.name} username={odontologo.username} id={odontologo.id} />
-                    </Link>
+    
+                    <Card name={odontologo.name} username={odontologo.username} id={odontologo.id} />
+                    
                 ))}
             </div>
         </main>

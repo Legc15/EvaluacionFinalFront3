@@ -2,25 +2,14 @@ import React, { createContext, useReducer } from "react";
 import "../../index.css";
 export const ContextGlobal = createContext(undefined)
 
-/*
-export const temas = {
-    light: {
-        id: "light",
-        color: "red",
-        background: "white"
-    },
-    dark: {
-        id: "dark",
-        color: "white",
-        background: "black"
-    }
-};
-*/
+
 const initialState = {
     theme: "light",
     favoritos: [],
-    flag: true,
+    favButton:"unClicked",
+    esFavorito: true,
 };
+
 const funcionReducer = (state, action) => {
     switch (action.type) {
         case "SWITCHTHEME":
@@ -29,9 +18,12 @@ const funcionReducer = (state, action) => {
         case "SETFAVORITOS":
             return { ...state, favoritos: action.payload};
 
-        case "FLAG":
-            return {...state, flag: action.payload};
+        case "FAVORITO":
+            return {...state, esFavorito: action.payload};
 
+        case "FAVBUTTON":
+            return {favButton: state.favButton === "unClicked" ? "clicked" : "unClicked"}                  
+            
         default:
             return state;
     }

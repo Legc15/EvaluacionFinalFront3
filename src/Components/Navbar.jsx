@@ -11,11 +11,11 @@ const Navbar = () => {
     const cambiarTema = () => {
         dispatch({ type: "SWITCHTHEME"});
     };
-
+    const buttonTitle = state.theme === "light" ? "Click for Dark Mode" : "Click for light Mode"; 
     
 
     return (
-        <div className="nav-contaier">
+        <div className="nav-container">
             
             <div className="nav-title">
                 <img 
@@ -32,7 +32,8 @@ const Navbar = () => {
                     <Link to="/contacto">Contact</Link>
                     <Link to="/favoritos">Fav</Link>
 
-                    <button onClick={cambiarTema}>
+                    <button onClick={cambiarTema}
+                            title={buttonTitle}>
                         {state.theme === "light" ?"🌙":"🌞" }
                     </button>
                 </div>

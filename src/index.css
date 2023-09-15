@@ -14,17 +14,25 @@ code {
     monospace;
 }
 
-
 h1 {
   text-align: center;
+  
+}
+
+h3 {
+  font-size: medium;
+}
+
+p {
+  font-size: smaller;
 }
 /*------------- HEADER---------------*/
 
 .nav-container{
   display: flex;
   justify-content: space-between;
-  margin: 0 50px;
-  height: 15vh;
+  margin: 0 75px;
+  height: 20vh;
 }
 
 .nav-title{
@@ -41,16 +49,27 @@ nav{
 
 nav button {
   background-color: black;
+  width: 50px;
+  height: 50px;
   border-radius: 5px;
-  border: none
+  border: none;
+  cursor: pointer;
+
 }
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   list-style:none;
   min-width: 30vw;
   padding: 1rem;
+  font-size: 19px;
+}
+
+.logoDiente{
+  width: 60px;
+  height: 60px;
 }
 
 .logoDiente{
@@ -60,6 +79,7 @@ nav button {
 
 a {
   color: #000;
+  font-size: larger;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -89,18 +109,47 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-
+/*-------------- LIGHT/DARK - MODE---------------*/
+.light {
+  background-color: white;
+  color: black;
+}
 
 .dark {
-  background-color: #12121296;
-  color: rgb(202, 29, 29);
+  background-color: #111010ec;
+  color: rgb(248, 248, 248);
 }
 
 .dark a {
   color: white;
 }
 
+.dark a {
+  color: white;
+}
 
+.dark a:hover{
+  color: rgb(255, 199, 189);
+}
+
+.dark nav button {
+  background-color: white;
+}
+
+
+.dark footer {
+  background-color: rgb(164, 71, 5);
+}
+
+.dark tr {
+  background-color: rgb(138, 127, 127);
+  color: black;
+}
+
+.dark .card {
+  background-color: rgb(100, 93, 93);
+  color: black;
+}
 
 /* --------------Home----------*/
 .Home{
@@ -135,21 +184,56 @@ tr:nth-child(even) {
   height: 350px;
   padding: 0.4em;
   border: 0.8px solid rgb(136, 136, 136);
+  border-radius: 15px;
 }
 
 
-.favButton {
-  background-color: rgba(136, 136, 136, 0.116);
+.unClicked {
+
   padding: 10px;
   border: none;
-  width: 100%;
+  width: 100px;
   cursor: pointer;
+  background-color: #007bffe8; /* Color de fondo predeterminado */
+  color: white; /* Color de texto predeterminado */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
 }
+
+
+
+.clicked {
+
+  padding: 10px;
+  border: none;
+  width: 100px;
+  cursor: pointer;
+  background-color: rgb(212, 114, 23); /* Color de fondo predeterminado */
+  color: white; /* Color de texto predeterminado */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+}
+
 
 
 
 /* --------------Contacto----------*/
 
+.contacto {
+  height: 67vh;
+}
+
+.contacto h2 {
+  text-align: center;
+}
+
+.contacto p {
+  text-align: center;
+}
 
 form {
   display: flex;
@@ -172,6 +256,15 @@ form {
   width: 100%; /* Establecer el ancho al 100% */
   
 }
+/*------------ Dentist Detail----------*/
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height:40vh;
+  margin: 10vh; 
+}
 
 /* ----------- Footer------*/
 
@@ -180,7 +273,7 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: rgb(14, 70, 87);
-  height: 18vh;
+  height: 20vh;
   margin-top: 2rem;
 }
 
@@ -203,12 +296,13 @@ footer {
 
 .socialMedia img {
   width: 30px;
-  cursor: pointer;
-  
+  cursor: pointer; 
 }
+
 .poweredBy {
   display: flex;
   margin-bottom: 25px;
+  
 }
 
 footer img {
@@ -220,4 +314,7 @@ footer p {
   margin: 0;
   padding-top: 0.7rem;
 }
+
+
+
 
