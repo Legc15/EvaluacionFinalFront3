@@ -15,7 +15,6 @@ export const setFavoritosStorage = (odontologo) => {
         favoritos.push(odontologo);
         localStorage.setItem("favs", JSON.stringify(favoritos));
         
-    } else {
         
     }
 };

@@ -130,10 +130,10 @@ tr:nth-child(even) {
   background-color: white;
 }
 
-.dark button {
+/*.dark button {
   background-color: rgb(14, 70, 87);
   
-}
+}*/
 
 .dark footer {
   background-color: rgb(164, 71, 5);

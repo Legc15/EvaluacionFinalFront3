@@ -13,7 +13,7 @@ const Card = ({ name, username, id }) => {
 
 
     const addFav = () => {
-        setStyleButton()
+        
         dispatch({ type: "FAVORITO" }); 
         if (!esFavorito(id)) {
             setFavoritosStorage({ name, username, id });
