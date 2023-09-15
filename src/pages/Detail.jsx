@@ -16,10 +16,10 @@ const Detail = () => {
     console.log(odontologo);
     
     return (
-        <div>
+        <div className='table'>
             <h2>Dentist details</h2>
             
-            <table>
+            <table >
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
