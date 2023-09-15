@@ -21,6 +21,7 @@ const Card = ({ name, username, id }) => {
         dispatch({ type: "FAVBUTTON"});
     }
 
+
     return (
         <div className="card">
             <Link to={`/odontologo/${id}`} className="card-link">
