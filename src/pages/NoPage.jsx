@@ -2,8 +2,8 @@ import React from 'react'
 
 function NoPage(){
     return (
-        <div>
-            <h1>Esta página no existe</h1>
+        <div className='Error404'>
+            <h1>This page does not exists</h1>
         </div>
     )
 }

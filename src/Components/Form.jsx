@@ -61,7 +61,7 @@ const Form = () => {
                     />
                 </div>
                 {mensaje && <p className={mensaje.includes('Gracias') ? 'exito' : 'error'}>{mensaje}</p>}
-                <button type="submit" >Enviar</button>
+                <button type="submit" >Submit</button>
             </form>
         </div>
     );

@@ -186,13 +186,13 @@ tr:nth-child(even) {
 }
 
 
-.favButton {
+.unClicked {
 
   padding: 10px;
   border: none;
   width: 100px;
   cursor: pointer;
-  background-color: #007bffbe; /* Color de fondo predeterminado */
+  background-color: #007bffe8; /* Color de fondo predeterminado */
   color: white; /* Color de texto predeterminado */
   border: none;
   border-radius: 10px;
@@ -200,6 +200,21 @@ tr:nth-child(even) {
 
 }
 
+
+
+.clicked {
+
+  padding: 10px;
+  border: none;
+  width: 100px;
+  cursor: pointer;
+  background-color: rgb(212, 114, 23); /* Color de fondo predeterminado */
+  color: white; /* Color de texto predeterminado */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+}
 
 
 
@@ -279,7 +294,7 @@ footer {
 
 .socialMedia img {
   width: 30px;
-  cursor: pointer;  
+  cursor: pointer; 
 }
 
 .poweredBy {

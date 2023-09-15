@@ -10,7 +10,7 @@ const Favoritos =()=>{
     useEffect(() => {
         const favoritos = obtenerFavoritosDeStorage();
         dispatch({type: "SETFAVORITOS", payload: favoritos})
-    }, [dispatch])
+    }, [state.favoritos, dispatch])
 
     return (
         <div>
